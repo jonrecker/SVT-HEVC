@@ -184,6 +184,14 @@ endif()
 option(BUILD_SHARED_LIBS "Build shared libraries (DLLs)." ON)
 option(COVERAGE "Generate coverage report")
 option(BUILD_APP "Build Enc App" ON)
+option(ENABLE_SVT_LOG "Enable SVT log" ON)
+
+if(ENABLE_SVT_LOG)
+    message(STATUS "SVT Log Enabled")
+    add_compile_definitions(LIB_PRINTF_ENABLE=1)
+else()
+    message(STATUS "SVT Log Disabled")
+endif()
 
 # Prepare for Coveralls
 if(COVERAGE AND NOT MSVC)

@@ -514,7 +514,8 @@ typedef void * EB_HANDLE;
                                             // Target rate and and max buffer size should be set properly even for fixed QP.
                                             // Disabled by default.
 #define DEADLOCK_DEBUG                   0
-#define LIB_PRINTF_ENABLE                1
+
+// define LIB_PRINTF_ENABLE in makefile to enable logging
 #if LIB_PRINTF_ENABLE
 #define SVT_LOG printf
 #else
